@@ -27,12 +27,19 @@ const { Content } = await render(figure);
 
   <Content />
 
-  <h2 class="text-lg font-bold my-4">Dedicated Posts</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+  <h2 class="text-lg font-bold my-4">Postingan Terkait</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
     {
       figure.data.posts.map((post) => (
         <PostEmbedded type={post.type} url={post.url} />
       ))
     }
   </div>
+  <p>
+    Jika kamu ingin menambahkan postingan terkait, silakan <a
+      class="text-blue-500 underline"
+      href={`https://github.com/notulen/indonesia-mengingat/edit/main/src/content/figures/${figure.id}.md`}
+      target="_blank">sunting file ini</a
+    >.
+  </p>
 </BaseLayout>
