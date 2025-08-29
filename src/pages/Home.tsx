@@ -18,7 +18,7 @@ export default function Home() {
               transform: "none",
               opacity: 1,
             }}
-            onClick={() => navigate(`/figure/${f.id}`)}
+            onClick={() => navigate(`/figures/${f.id}`)}
           >
             <div className="mx-2 flex-1">
               <div className="relative mt-2 aspect-square w-full">
