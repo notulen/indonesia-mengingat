@@ -3,7 +3,7 @@ id: affan-kurniawan
 name: Affan Kurniawan
 role: Driver Ojek Online
 status: deceased
-photoUrl: /indonesia-mengingat/figures/affan-kurniawan.webp
+photoUrl: figures/affan-kurniawan.webp
 # All posts related to this figure
 posts:
   - type: instagram

@@ -1,0 +1,13 @@
+---
+import FigureCard from "@/components/figure-card.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const figures = await getCollection("figures");
+---
+
+<BaseLayout>
+  <div class="flex gap-8 justify-center">
+    {figures.map((figure) => <FigureCard {...figure.data} />)}
+  </div>
+</BaseLayout>

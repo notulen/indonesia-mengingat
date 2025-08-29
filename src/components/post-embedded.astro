@@ -1,0 +1,15 @@
+---
+import { InstagramEmbed } from "react-social-media-embed";
+
+const { type, url } = Astro.props;
+---
+
+{
+  type === "instagram" ? (
+    <InstagramEmbed url={url} />
+  ) : (
+    <a href={url} target="_blank" rel="noreferrer">
+      View post
+    </a>
+  )
+}

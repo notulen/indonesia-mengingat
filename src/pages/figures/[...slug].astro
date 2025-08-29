@@ -1,0 +1,31 @@
+---
+import PostEmbedded from "@/components/post-embedded.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const figures = await getCollection("figures");
+  return figures.map((figure) => ({
+    params: { slug: figure.id },
+    props: figure,
+  }));
+}
+
+const figure = Astro.props;
+const { Content } = await render(figure);
+---
+
+<BaseLayout>
+  <h2 class="text-3xl font-bold mb-4">{figure.data.name}</h2>
+
+  <Content />
+
+  <h2 class="text-lg font-bold my-4">Dedicated Posts</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+    {
+      figure.data.posts.map((post) => (
+        <PostEmbedded type={post.type} url={post.url} />
+      ))
+    }
+  </div>
+</BaseLayout>

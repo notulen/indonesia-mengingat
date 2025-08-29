@@ -1,14 +1,13 @@
 "use client";
-
-import { cn } from "@/lib/utils";
+import React, { useRef } from "react";
 import {
   motion,
-  useMotionTemplate,
   useMotionValue,
   useSpring,
   useTransform,
+  useMotionTemplate,
 } from "motion/react";
-import React, { useRef } from "react";
+import { cn } from "@/lib/utils";
 
 export const CometCard = ({
   rotateDepth = 17.5,
@@ -32,23 +31,23 @@ export const CometCard = ({
   const rotateX = useTransform(
     mouseYSpring,
     [-0.5, 0.5],
-    [`-${rotateDepth}deg`, `${rotateDepth}deg`]
+    [`-${rotateDepth}deg`, `${rotateDepth}deg`],
   );
   const rotateY = useTransform(
     mouseXSpring,
     [-0.5, 0.5],
-    [`${rotateDepth}deg`, `-${rotateDepth}deg`]
+    [`${rotateDepth}deg`, `-${rotateDepth}deg`],
   );
 
   const translateX = useTransform(
     mouseXSpring,
     [-0.5, 0.5],
-    [`-${translateDepth}px`, `${translateDepth}px`]
+    [`-${translateDepth}px`, `${translateDepth}px`],
   );
   const translateY = useTransform(
     mouseYSpring,
     [-0.5, 0.5],
-    [`${translateDepth}px`, `-${translateDepth}px`]
+    [`${translateDepth}px`, `-${translateDepth}px`],
   );
 
   const glareX = useTransform(mouseXSpring, [-0.5, 0.5], [0, 100]);
