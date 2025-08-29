@@ -1,15 +1,14 @@
 ---
+import { TweetCard } from "@/components/magicui/tweet-card";
 import { InstagramEmbed } from "react-social-media-embed";
 
 const { type, url } = Astro.props;
+
+function getTweetId(url: string) {
+  const match = url.match(/status\/(\d+)/);
+  return match ? match[1] : "";
+}
 ---
 
-{
-  type === "instagram" ? (
-    <InstagramEmbed url={url} />
-  ) : (
-    <a href={url} target="_blank" rel="noreferrer">
-      View post
-    </a>
-  )
-}
+{type === "instagram" && <InstagramEmbed url={url} />}
+{type === "x" && <TweetCard id={getTweetId(url)} className="max-h-72" />}

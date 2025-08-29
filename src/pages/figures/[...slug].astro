@@ -28,7 +28,7 @@ const { Content } = await render(figure);
   <Content />
 
   <h2 class="text-lg font-bold my-4">Postingan Terkait</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mb-8">
     {
       figure.data.posts.map((post) => (
         <PostEmbedded type={post.type} url={post.url} />
