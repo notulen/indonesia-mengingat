@@ -26,6 +26,8 @@ jobs:
 
       - name: Install, build, and upload your site
         uses: withastro/action@v4
+        with:
+          packageManager: pnpm@latest
 
       - name: Deploy to GitHub Pages
         id: deployment
