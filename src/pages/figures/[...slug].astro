@@ -16,7 +16,14 @@ const { Content } = await render(figure);
 ---
 
 <BaseLayout>
-  <h2 class="text-3xl font-bold mb-4">{figure.data.name}</h2>
+  <h2 class="text-3xl font-bold">{figure.data.name}</h2>
+
+  <img
+    loading="lazy"
+    src={`${import.meta.env.BASE_URL}/${figure.data.photoUrl}`}
+    alt={figure.data.name}
+    class="w-80 my-5 rounded-[16px] bg-[#000000] saturate-0 aspect-square object-cover contrast-75"
+  />
 
   <Content />
 
