@@ -22,6 +22,8 @@ posts:
     url: https://www.instagram.com/p/DN7pjdrkqWr
   - type: x
     url: https://x.com/Itsyummies/status/1961079472410505723
+  - type: x
+    url: https://x.com/LexWu_13/status/1961392057312055576
 ---
 
 Affan Kurniawan adalah seorang pengemudi ojek online yang meninggal dunia setelah ditabrak dan dilindas kendaraan taktis (rantis) pada demonstrasi di sekitar gedung DPR, Kamis malam, 28 Agustus 2025.
